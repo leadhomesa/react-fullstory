@@ -1,25 +1,25 @@
 {
-  "name": "react-fullstory",
-  "version": "1.0.3",
+  "name": "react-fullstory-updated",
+  "version": "1.0.1",
   "description": "A component to initialize Fullstory in your application",
   "main": "build/index.js",
   "dependencies": {},
   "scripts": {
-    "test": "jest --coverage",
+    "test": "jest --coverage ./build",
     "test:watch": "jest --coverage --watch",
     "build": "babel src -d build",
-    "prepublishOnly": "npm run test && npm run build"
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cereallarceny/react-fullstory.git"
+    "url": "https://github.com/leadhomesa/react-fullstory"
   },
   "author": "Patrick Cason <me@patrickcason.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cereallarceny/react-fullstory/issues"
+    "url": "https://github.com/leadhomesa/react-fullstory/issues"
   },
-  "homepage": "https://github.com/cereallarceny/react-fullstory#readme",
+  "homepage": "https://github.com/leadhomesa/react-fullstory#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-jest": "^22.4.4",

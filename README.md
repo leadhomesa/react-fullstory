@@ -3,7 +3,7 @@ A component to run FullStory in your React application. This is safe to use both
 
 ## Installation
 ```bash
-npm i react-fullstory --save
+npm i react-fullstory-updated --save
 ```
 
 ## Usage
@@ -11,7 +11,7 @@ Include the `<FullStory />` component somewhere in your application - probably i
 
 ```js
 import { Component } from 'react';
-import FullStory from 'react-fullstory';
+import FullStory from 'react-fullstory-updated';
 
 export class App extends Component {
   render () {
@@ -27,7 +27,7 @@ export class App extends Component {
 This loads FullStory at the creation of the component and places the script appropriately in the page. This library allows for the calling of any function FullStory currently has, or will ever have, in their library.
 
 ```js
-import { FullStoryAPI } from 'react-fullstory';
+import { FullStoryAPI } from 'react-fullstory-updated';
 
 // Identify method
 FullStoryAPI('identify', userId, {
