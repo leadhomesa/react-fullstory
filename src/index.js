@@ -19,7 +19,7 @@ export const FullStoryAPI = (fn, ...args) => {
 
 export const getSessionURL = () => {
     if (canUseDOM && getWindowFullStory()) {
-        return window['_fs_namespace'].getCurrentSessionURL();
+        return FS.getCurrentSessionURL();
       } else {
         console.warn('FullStory not initialized yet');
         return null;
@@ -30,7 +30,7 @@ export default class FullStory extends Component {
   constructor(props) {
     super(props);
 
-    const { org, debug, host, namespace } = props;
+    const { org, debug, host, namespace, setSessionURL } = props;
 
     if (!org || !canUseDOM) {
       return;
@@ -90,6 +90,10 @@ export default class FullStory extends Component {
         };
         g.clearUserCookie = function() {};
     })(window, document, window['_fs_namespace'], 'script', 'user');
+    window['_fs_ready'] = function() {
+      let sessionUrl = FS.getCurrentSessionURL();
+      if (setSessionURL) setSessionURL(sessionUrl)
+     };
     }
   }
 
