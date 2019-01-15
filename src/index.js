@@ -17,6 +17,15 @@ export const FullStoryAPI = (fn, ...args) => {
   }
 };
 
+export const getSessionURL = () => {
+    if (canUseDOM && getWindowFullStory()) {
+        return window['_fs_namespace'].getCurrentSessionURL();
+      } else {
+        console.warn('FullStory not initialized yet');
+        return null;
+      } 
+}
+
 export default class FullStory extends Component {
   constructor(props) {
     super(props);
